@@ -2,13 +2,13 @@
 // No arquivo firebase.js
 
 var firebaseConfig = {
-    apiKey: "AIzaSyDYSyBvkr0SaNgktqihuQdSd6Lzt3aRINc",
-    authDomain: "teste-a5663.firebaseapp.com",
-    projectId: "teste-a5663",
-    storageBucket: "teste-a5663.appspot.com",
-    messagingSenderId: "397033143508",
-    appId: "1:397033143508:web:6fe4dd6e494cc064484f41"
-};
+    apiKey: "AIzaSyCxe8HiyV3aU1M_e5DH7tLn3W7Zx2EcJ5I",
+    authDomain: "teste-ea84b.firebaseapp.com",
+    projectId: "teste-ea84b",
+    storageBucket: "teste-ea84b.appspot.com",
+    messagingSenderId: "237622986110",
+    appId: "1:237622986110:web:3af3f7416586f779361f2f"
+  };
 
 firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
