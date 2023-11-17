@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/votar.css">
+    <title>Hype Experience</title>
+     <!-- Adicione o SDK do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+     <!-- Configurações do seu projeto Firebase -->
+     <script src="firebase.js"></script>
+</head>
+
+<body>
+    <div class="banner">
+        <img src="styles/desktop/votar.png" alt="Imagem do Banner">
+    </div>
+<!-- Seção 1 - Hit do Ano -->
+<section class="section1">
+    <h2>Categoria Hit do Ano</h2>
+
+    <!-- Primeira fileira de áudios -->
+    <div class="audio-row">
+        <figure>
+            <figcaption>Hit da Tribo Brave</figcaption>
+            <audio controls>
+                <source src="styles/audio/BRAVE.mp3" type="audio/mp3">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </figure>
+
+        <figure>
+            <figcaption>Hit da Tribo Clay</figcaption>
+            <audio controls>
+                <source src="styles/audio/clay.unknown" type="audio/mp3">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </figure>
+
+        <figure>
+            <figcaption>Hit da Tribo Grace</figcaption>
+            <audio controls>
+                <source src="styles/audio/Grace.mp3" type="audio/mp3">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </figure>
+    </div>
+
+    <!-- Segunda fileira de áudios -->
+    <div class="audio-row">
+        <figure>
+            <figcaption>Hit da Tribo Seed</figcaption>
+            <audio controls>
+                <source src="styles/audio/seed.mp3" type="audio/mp3">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </figure>
+
+        <figure>
+            <figcaption>Hit da Tribo Rhema</figcaption>
+            <audio controls>
+                <source src="styles/audio/Rhema2.mp3" type="audio/mp3">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </figure>
+
+        <figure>
+            <figcaption>Hit da Tribo Tank</figcaption>
+            <audio controls>
+                <source src="styles/audio/Tank.wav" type="audio/mp3">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </figure>
+    </div>
+
+    <!-- Terceira fileira de áudios -->
+    <div class="audio-row">
+        <figure>
+            <figcaption>Hit da Tribo Track</figcaption>
+            <audio controls>
+                <source src="styles/audio/track.unknown" type="audio/mp3">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </figure>
+
+        <figure>
+            <figcaption>Hit da Tribo Waken</figcaption>
+            <audio controls>
+                <source src="styles/audio/Waken.mp3" type="audio/mp3">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </figure>
+
+        <figure>
+            <figcaption>Hit da Tribo Bind</figcaption>
+            <audio controls>
+                <source src="caminho/para/audio1.mp3" type="audio/mp3">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </figure>
+    </div>
+
+    <select id="hitDoAnoOpcoes">
+        <option value="" disabled selected>Escolha a Tribo</option>
+        <option value="TRIBO TRACK">TRIBO TRACK</option>
+        <option value="TRIBO BIND">TRIBO BIND</option>
+        <option value="TRIBO SEED">TRIBO SEED</option>
+        <option value="TRIBO GRACE">TRIBO GRACE</option>
+        <option value="TRIBO CLAY">TRIBO CLAY</option>
+        <option value="TRIBO TANK">TRIBO TANK</option>
+        <option value="TRIBO BRAVE">TRIBO BRAVE</option>
+        <option value="TRIBO WAKEN">TRIBO WAKEN</option>
+        <option value="TRIBO RHEMA">TRIBO RHEMA</option>
+    </select>
+</section>
+
+
+    <!-- Seção 2 -->
+<section class="section2">
+    <!-- Conteúdo da Seção 2 -->
+    <h2>Categoria GC que mais serve</h2>
+    <select id="gcServeOpcoes">
+        <option value="" disabled selected>Escolha o GC</option>
+        <option value="INTOCAVEIS">INTOCAVEIS</option>
+        <option value="COMBATENTES">COMBATENTES</option>
+        <option value="DESBRAVADORES">DESBRAVADORES</option>
+        <option value="FIRMADOS">FIRMADOS</option>
+        <option value="EDIFICADAS UNI">EDIFICADAS UNI</option>
+        <option value="TEMENTES UNI">TEMENTES UNI</option>
+        <option value="DESTEMIDAS">DESTEMIDAS</option>
+        <option value="QUEBRANTADAS">QUEBRANTADAS</option>
+        <option value="PRUDENTES UNI">PRUDENTES UNI</option>
+        <option value="LUTADORES">LUTADORES</option>
+        <option value="GRATOS">GRATOS</option>
+        <option value="OBSTINADOS">OBSTINADOS</option>
+        <option value="INTEGROS">INTEGROS</option>
+        <option value="MOLDADOS">MOLDADOS</option>
+        <option value="PRUDENTES JR">PRUDENTES JR</option>
+        <option value="APÓSTOLOS">APÓSTOLOS</option>
+        <option value="AGRACIADOS">AGRACIADOS</option>
+        <option value="ELETRIZADOS">ELETRIZADOS</option>
+        <option value="TEMENTES JR">TEMENTES JR</option>
+        <option value="SEMELHANTES">SEMELHANTES</option>
+        <option value="ATENCIOSAS">ATENCIOSAS</option>
+        <option value="ADMIRAVEIS">ADMIRAVEIS</option>
+        <option value="ESSENCIAIS">ESSENCIAIS</option>
+        <option value="INFLUENTES">INFLUENTES</option>
+        <option value="EXTRAORDINARIAS">EXTRAORDINARIAS</option>
+        <option value="IMBATIVEIS">IMBATIVEIS</option>
+        <option value="DESTINADAS">DESTINADAS</option>
+        <option value="ESCOLHIDAS">ESCOLHIDAS</option>
+        <option value="REFUGIADAS">REFUGIADAS</option>
+        <option value="RENOVADAS">RENOVADAS</option>
+        <option value="FORTALECIDOS">FORTALECIDOS</option>
+        <option value="COMPASSIVOS">COMPASSIVOS</option>
+        <option value="SACERDOTES">SACERDOTES</option>
+        <option value="SELADOS">SELADOS</option>
+        <option value="CORAJOSOS">CORAJOSOS</option>
+        <option value="FERVOROSAS">FERVOROSAS</option>
+        <option value="AMADAS">AMADAS</option>
+        <option value="SANTIFICADAS">SANTIFICADAS</option>
+        <option value="TRANSFORMADAS">TRANSFORMADAS</option>
+        <option value="PERSEVERANTES">PERSEVERANTES</option>
+        <option value="CONVICTAS">CONVICTAS</option>
+        <option value="SEGURAS">SEGURAS</option>
+        <option value="PRINCESS">PRINCESS</option>
+        <option value="EDIFICADAS SCHOOL">EDIFICADAS SCHOOL</option>
+        <option value="TRANSBORDANTES">TRANSBORDANTES</option>
+        <option value="ESPELHADAS">ESPELHADAS</option>
+        <option value="PROTEGIDAS">PROTEGIDAS</option>
+        <option value="GENUINAS">GENUINAS</option>
+        <option value="ADOTADAS">ADOTADAS</option>
+        <option value="UNIGENITAS">UNIGENITAS</option>
+    </select>
+</section>
+
+
+    <!-- Seção 3 -->
+<section class="section3">
+    <!-- Conteúdo da Seção 3 -->
+    <h2>Categoria GC mais instagramável</h2>
+    <select id="gcInstagramavelOpcoes">
+        <option value="" disabled selected>Escolha o GC</option>
+        <option value="INTOCAVEIS">INTOCAVEIS</option>
+        <option value="COMBATENTES">COMBATENTES</option>
+        <option value="DESBRAVADORES">DESBRAVADORES</option>
+        <option value="FIRMADOS">FIRMADOS</option>
+        <option value="EDIFICADAS UNI">EDIFICADAS UNI</option>
+        <option value="TEMENTES UNI">TEMENTES UNI</option>
+        <option value="DESTEMIDAS">DESTEMIDAS</option>
+        <option value="QUEBRANTADAS">QUEBRANTADAS</option>
+        <option value="PRUDENTES UNI">PRUDENTES UNI</option>
+        <option value="LUTADORES">LUTADORES</option>
+        <option value="GRATOS">GRATOS</option>
+        <option value="OBSTINADOS">OBSTINADOS</option>
+        <option value="INTEGROS">INTEGROS</option>
+        <option value="MOLDADOS">MOLDADOS</option>
+        <option value="PRUDENTES JR">PRUDENTES JR</option>
+        <option value="APÓSTOLOS">APÓSTOLOS</option>
+        <option value="AGRACIADOS">AGRACIADOS</option>
+        <option value="ELETRIZADOS">ELETRIZADOS</option>
+        <option value="TEMENTES JR">TEMENTES JR</option>
+        <option value="SEMELHANTES">SEMELHANTES</option>
+        <option value="ATENCIOSAS">ATENCIOSAS</option>
+        <option value="ADMIRAVEIS">ADMIRAVEIS</option>
+        <option value="ESSENCIAIS">ESSENCIAIS</option>
+        <option value="INFLUENTES">INFLUENTES</option>
+        <option value="EXTRAORDINARIAS">EXTRAORDINARIAS</option>
+        <option value="IMBATIVEIS">IMBATIVEIS</option>
+        <option value="DESTINADAS">DESTINADAS</option>
+        <option value="ESCOLHIDAS">ESCOLHIDAS</option>
+        <option value="REFUGIADAS">REFUGIADAS</option>
+        <option value="RENOVADAS">RENOVADAS</option>
+        <option value="FORTALECIDOS">FORTALECIDOS</option>
+        <option value="COMPASSIVOS">COMPASSIVOS</option>
+        <option value="SACERDOTES">SACERDOTES</option>
+        <option value="SELADOS">SELADOS</option>
+        <option value="CORAJOSOS">CORAJOSOS</option>
+        <option value="FERVOROSAS">FERVOROSAS</option>
+        <option value="AMADAS">AMADAS</option>
+        <option value="SANTIFICADAS">SANTIFICADAS</option>
+        <option value="TRANSFORMADAS">TRANSFORMADAS</option>
+        <option value="PERSEVERANTES">PERSEVERANTES</option>
+        <option value="CONVICTAS">CONVICTAS</option>
+        <option value="SEGURAS">SEGURAS</option>
+        <option value="PRINCESS">PRINCESS</option>
+        <option value="EDIFICADAS SCHOOL">EDIFICADAS SCHOOL</option>
+        <option value="TRANSBORDANTES">TRANSBORDANTES</option>
+        <option value="ESPELHADAS">ESPELHADAS</option>
+        <option value="PROTEGIDAS">PROTEGIDAS</option>
+        <option value="GENUINAS">GENUINAS</option>
+        <option value="ADOTADAS">ADOTADAS</option>
+        <option value="UNIGENITAS">UNIGENITAS</option>
+    </select>
+</section>
+
+
+    <!-- Seção 4 -->
+<section class="section4">
+    <!-- Conteúdo da Seção 4 -->
+    <h2>Categoria GC mais atrativo</h2>
+    <select id="gcAtrativoOpcoes">
+        <option value="" disabled selected>Escolha o GC</option>
+        <option value="INTOCAVEIS">INTOCAVEIS</option>
+        <option value="COMBATENTES">COMBATENTES</option>
+        <option value="DESBRAVADORES">DESBRAVADORES</option>
+        <option value="FIRMADOS">FIRMADOS</option>
+        <option value="EDIFICADAS UNI">EDIFICADAS UNI</option>
+        <option value="TEMENTES UNI">TEMENTES UNI</option>
+        <option value="DESTEMIDAS">DESTEMIDAS</option>
+        <option value="QUEBRANTADAS">QUEBRANTADAS</option>
+        <option value="PRUDENTES UNI">PRUDENTES UNI</option>
+        <option value="LUTADORES">LUTADORES</option>
+        <option value="GRATOS">GRATOS</option>
+        <option value="OBSTINADOS">OBSTINADOS</option>
+        <option value="INTEGROS">INTEGROS</option>
+        <option value="MOLDADOS">MOLDADOS</option>
+        <option value="PRUDENTES JR">PRUDENTES JR</option>
+        <option value="APÓSTOLOS">APÓSTOLOS</option>
+        <option value="AGRACIADOS">AGRACIADOS</option>
+        <option value="ELETRIZADOS">ELETRIZADOS</option>
+        <option value="TEMENTES JR">TEMENTES JR</option>
+        <option value="SEMELHANTES">SEMELHANTES</option>
+        <option value="ATENCIOSAS">ATENCIOSAS</option>
+        <option value="ADMIRAVEIS">ADMIRAVEIS</option>
+        <option value="ESSENCIAIS">ESSENCIAIS</option>
+        <option value="INFLUENTES">INFLUENTES</option>
+        <option value="EXTRAORDINARIAS">EXTRAORDINARIAS</option>
+        <option value="IMBATIVEIS">IMBATIVEIS</option>
+        <option value="DESTINADAS">DESTINADAS</option>
+        <option value="ESCOLHIDAS">ESCOLHIDAS</option>
+        <option value="REFUGIADAS">REFUGIADAS</option>
+        <option value="RENOVADAS">RENOVADAS</option>
+        <option value="FORTALECIDOS">FORTALECIDOS</option>
+        <option value="COMPASSIVOS">COMPASSIVOS</option>
+        <option value="SACERDOTES">SACERDOTES</option>
+        <option value="SELADOS">SELADOS</option>
+        <option value="CORAJOSOS">CORAJOSOS</option>
+        <option value="FERVOROSAS">FERVOROSAS</option>
+        <option value="AMADAS">AMADAS</option>
+        <option value="SANTIFICADAS">SANTIFICADAS</option>
+        <option value="TRANSFORMADAS">TRANSFORMADAS</option>
+        <option value="PERSEVERANTES">PERSEVERANTES</option>
+        <option value="CONVICTAS">CONVICTAS</option>
+        <option value="SEGURAS">SEGURAS</option>
+        <option value="PRINCESS">PRINCESS</option>
+        <option value="EDIFICADAS SCHOOL">EDIFICADAS SCHOOL</option>
+        <option value="TRANSBORDANTES">TRANSBORDANTES</option>
+        <option value="ESPELHADAS">ESPELHADAS</option>
+        <option value="PROTEGIDAS">PROTEGIDAS</option>
+        <option value="GENUINAS">GENUINAS</option>
+        <option value="ADOTADAS">ADOTADAS</option>
+        <option value="UNIGENITAS">UNIGENITAS</option>
+    </select>
+</section>
+
+
+    <!-- Seção 5 -->
+<section class="section5">
+    <!-- Conteúdo da Seção 5 -->
+    <h2>Categoria Tribo da Galera</h2>
+    <select id="triboGaleraOpcoes">
+        <option value="" disabled selected>Escolha a Tribo</option>
+        <option value="TRIBO TRACK">TRIBO TRACK</option>
+        <option value="TRIBO BIND">TRIBO BIND</option>
+        <option value="TRIBO SEED">TRIBO SEED</option>
+        <option value="TRIBO GRACE">TRIBO GRACE</option>
+        <option value="TRIBO CLAY">TRIBO CLAY</option>
+        <option value="TRIBO TANK">TRIBO TANK</option>
+        <option value="TRIBO BRAVE">TRIBO BRAVE</option>
+        <option value="TRIBO WAKEN">TRIBO WAKEN</option>
+        <option value="TRIBO RHEMA">TRIBO RHEMA</option>
+    </select>
+</section>
+
+
+    <!-- Seção 6 -->
+<section class="section6">
+    <!-- Conteúdo da Seção 6 -->
+    <h2>Categoria Tribo mais Estilosa</h2>
+    <select id="triboEstilosaOpcoes">
+        <option value="" disabled selected>Escolha a Tribo</option>
+        <option value="TRIBO TRACK">TRIBO TRACK</option>
+        <option value="TRIBO BIND">TRIBO BIND</option>
+        <option value="TRIBO SEED">TRIBO SEED</option>
+        <option value="TRIBO GRACE">TRIBO GRACE</option>
+        <option value="TRIBO CLAY">TRIBO CLAY</option>
+        <option value="TRIBO TANK">TRIBO TANK</option>
+        <option value="TRIBO BRAVE">TRIBO BRAVE</option>
+        <option value="TRIBO WAKEN">TRIBO WAKEN</option>
+        <option value="TRIBO RHEMA">TRIBO RHEMA</option>
+    </select>
+</section>
+
+
+    <!-- Seção 7 -->
+<section class="section7">
+    <!-- Conteúdo da Seção 7 -->
+    <h2>Categoria GC que mais convida</h2>
+    <select id="gcConvidaOpcoes">
+        <option value="" disabled selected>Escolha o GC</option>
+        <option value="INTOCAVEIS">INTOCAVEIS</option>
+        <option value="COMBATENTES">COMBATENTES</option>
+        <option value="DESBRAVADORES">DESBRAVADORES</option>
+        <option value="FIRMADOS">FIRMADOS</option>
+        <option value="EDIFICADAS UNI">EDIFICADAS UNI</option>
+        <option value="TEMENTES UNI">TEMENTES UNI</option>
+        <option value="DESTEMIDAS">DESTEMIDAS</option>
+        <option value="QUEBRANTADAS">QUEBRANTADAS</option>
+        <option value="PRUDENTES UNI">PRUDENTES UNI</option>
+        <option value="LUTADORES">LUTADORES</option>
+        <option value="GRATOS">GRATOS</option>
+        <option value="OBSTINADOS">OBSTINADOS</option>
+        <option value="INTEGROS">INTEGROS</option>
+        <option value="MOLDADOS">MOLDADOS</option>
+        <option value="PRUDENTES JR">PRUDENTES JR</option>
+        <option value="APÓSTOLOS">APÓSTOLOS</option>
+        <option value="AGRACIADOS">AGRACIADOS</option>
+        <option value="ELETRIZADOS">ELETRIZADOS</option>
+        <option value="TEMENTES JR">TEMENTES JR</option>
+        <option value="SEMELHANTES">SEMELHANTES</option>
+        <option value="ATENCIOSAS">ATENCIOSAS</option>
+        <option value="ADMIRAVEIS">ADMIRAVEIS</option>
+        <option value="ESSENCIAIS">ESSENCIAIS</option>
+        <option value="INFLUENTES">INFLUENTES</option>
+        <option value="EXTRAORDINARIAS">EXTRAORDINARIAS</option>
+        <option value="IMBATIVEIS">IMBATIVEIS</option>
+        <option value="DESTINADAS">DESTINADAS</option>
+        <option value="ESCOLHIDAS">ESCOLHIDAS</option>
+        <option value="REFUGIADAS">REFUGIADAS</option>
+        <option value="RENOVADAS">RENOVADAS</option>
+        <option value="FORTALECIDOS">FORTALECIDOS</option>
+        <option value="COMPASSIVOS">COMPASSIVOS</option>
+        <option value="SACERDOTES">SACERDOTES</option>
+        <option value="SELADOS">SELADOS</option>
+        <option value="CORAJOSOS">CORAJOSOS</option>
+        <option value="FERVOROSAS">FERVOROSAS</option>
+        <option value="AMADAS">AMADAS</option>
+        <option value="SANTIFICADAS">SANTIFICADAS</option>
+        <option value="TRANSFORMADAS">TRANSFORMADAS</option>
+        <option value="PERSEVERANTES">PERSEVERANTES</option>
+        <option value="CONVICTAS">CONVICTAS</option>
+        <option value="SEGURAS">SEGURAS</option>
+        <option value="PRINCESS">PRINCESS</option>
+        <option value="EDIFICADAS SCHOOL">EDIFICADAS SCHOOL</option>
+        <option value="TRANSBORDANTES">TRANSBORDANTES</option>
+        <option value="ESPELHADAS">ESPELHADAS</option>
+        <option value="PROTEGIDAS">PROTEGIDAS</option>
+        <option value="GENUINAS">GENUINAS</option>
+        <option value="ADOTADAS">ADOTADAS</option>
+        <option value="UNIGENITAS">UNIGENITAS</option>
+    </select>
+</section>
+
+
+    <!-- Seção 8 - Redirecionamento -->
+    <section >
+        <button onclick="enviarVotos()" class="section8">Enviar votos</button>
+    </section>
+    <!-- Script para manipular o envio do formulário -->
+    <script src="crud.js"></script>
+</body>
+
+</html>

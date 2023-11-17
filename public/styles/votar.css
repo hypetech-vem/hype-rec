@@ -1,0 +1,142 @@
+/* Reset de alguns estilos padrão */
+body {
+    font-family: 'Type Machine', sans-serif;
+    line-height: 1.6;
+    background-color: #000;
+    color: #fff;
+    background-image: url('desktop/estrela.png');
+    background-repeat: repeat;
+}
+
+.container {
+    max-width: 100%; /* Mudança para tornar a largura do container 100% */
+    padding: 0 20px; /* Adição de espaçamento interno para melhorar a legibilidade em dispositivos menores */
+    box-sizing: border-box; /* Evitar que as bordas e o preenchimento aumentem a largura do container */
+    margin: 0 auto;
+}
+
+/* Estilo para o banner no topo */
+.banner {
+    width: 100%;
+    max-height: auto; /* Ajuste para altura automática para manter a proporção da imagem */
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mídia para telas menores, como celulares */
+@media screen and (max-width: 767px) {
+    .banner img {
+        content: url('mobile/mobileVotar.png');
+        width: 100%;
+    }
+}
+
+/* Estilo para cada seção */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box; /* Evitar que as bordas e o preenchimento aumentem a largura do elemento */
+}
+
+h2 {
+    font-family: 'Type Machine', sans-serif;
+    font-weight: bold;
+    font-size: 2em; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #EF8122;
+    text-align: center;
+}
+
+/* Estilo para os controles de áudio */
+.audio-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centralizar os elementos */
+}
+
+figure {
+    font-size: 1em; /* Ajuste o tamanho da fonte conforme necessário */
+    margin: 0 10px 20px;
+    width: calc(33.33% - 20px); /* Ajuste para exibir 3 elementos por linha com margens */
+    box-sizing: border-box;
+}
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Estilo para a dropdown de seleção */
+select {
+    font-size: 1em; /* Ajuste o tamanho da fonte conforme necessário */
+    width: 55%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: 'Type Machine', sans-serif;
+}
+
+/* Estilo para o botão */
+button {
+    display: block;
+    margin: 20px auto; /* Centralizar verticalmente com margem superior */
+    text-align: center;
+    background-color: #EF8122;
+    color: white;
+    padding: 20px 60px;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.2em; /* Ajuste o tamanho da fonte conforme necessário */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #D95F12;
+}
+
+/* Estilo adicional para os controles de áudio em dispositivos móveis */
+@media screen and (max-width: 767px) {
+    .audio-row {
+        flex-direction: column; /* Altera a direção do flex container para coluna em telas menores */
+    }
+
+    figure {
+        width: 100%; /* Faz com que cada reprodutor de áudio ocupe 100% da largura */
+        margin: 0 0 20px; /* Adiciona margem inferior para separar cada reprodutor */
+    }
+
+    audio {
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para destacar os controles */
+        margin-top: 10px;
+    }
+
+    /* Estilizar os controles de áudio para uma aparência mais limpa */
+    audio::-webkit-media-controls-panel {
+        background-color: #fff;
+        border-radius: 8px;
+    }
+
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-volume-slider {
+        background-color: #fff; /* Cor do botão de reprodução e controle de volume */
+    }
+
+    audio::-webkit-media-controls-timeline,
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display {
+        color: #000; /* Cor do temporizador de reprodução */
+    }
+
+    audio::-webkit-media-controls-mute-button,
+    audio::-webkit-media-controls-fullscreen-button {
+        color: #fff; /* Cor dos botões de mudo e tela cheia */
+    }
+}

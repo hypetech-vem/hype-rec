@@ -1,0 +1,58 @@
+/* Reset de alguns estilos padrão */
+body {
+    font-family: 'Type Machine', sans-serif;
+    line-height: 1.6;
+    background-color: #000;
+    color: #fff;
+    padding-bottom: 20px; /* Adicione um espaçamento interno à base conforme necessário */
+}
+
+/* Estilo para o banner no topo */
+.banner {
+    width: 100%;
+    max-height: auto; /* Ajuste para altura automática para manter a proporção da imagem */
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mídia para telas menores, como celulares */
+@media screen and (max-width: 767px) {
+    .banner img {
+        content: url('mobile/mobileObrigada.png');
+        width: 100%;
+    }
+}
+
+h2 {
+    font-family: 'Type Machine', sans-serif;
+    font-weight: bold;
+    font-size: 2em; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #EF8122;
+    text-align: center;
+}
+
+/* Estilo para o botão */
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha em telas pequenas */
+    margin-top: 10px;
+}
+
+a {
+    text-align: center;
+    background-color: #EF8122;
+    color: white;
+    padding: 20px 60px;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.2em; /* Ajuste o tamanho da fonte conforme necessário */
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 10px 20px; /* Espaçamento entre os botões */
+}

@@ -1,0 +1,82 @@
+/* Estilo para o corpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Type machine', sans-serif;
+    position: relative;
+    background-color: black;
+}
+
+/* Estilo para ambas as seções */
+.section1,
+.section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para a seção 1 (desktop) */
+.section1 {
+    background-image: url('desktop/home1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 100vh;
+
+    @media (max-width: 767px) {
+        display: none; /* Oculta a seção 1 em telas menores que 767 pixels */
+    }
+}
+
+/* Estilo para a seção 2 (desktop) */
+.section2 {
+    background-image: url('desktop/home2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 100vh;
+    text-align: center;
+    padding: 20px; /* Adicione algum espaçamento interno */
+
+    @media (max-width: 767px) {
+        background-image: url('mobile/mobileHome.png');
+    }
+}
+
+/* Estilo para a seção de cabeçalho */
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilo para a seção principal (seção 2) */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adicione estilos específicos para o botão na seção 2 */
+.votar-btn {
+    display: block;
+    margin-top: auto; /* Use 'auto' para posicionar o botão no final da seção */
+    margin-bottom: 50px; /* Adicione uma margem inferior para evitar que o botão fique muito próximo da base */
+    background-color: #EF8122;
+    color: white;
+    padding: 15px 40px; /* Reduza o padding do botão */
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Estilo para o conteúdo dentro da seção principal */
+.content {
+    max-width: 600px;
+    text-align: center;
+}
