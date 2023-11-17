@@ -1,7 +1,6 @@
 
 // No arquivo firebase.js
-
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyDuexLT4tqdisAycAOIO-ZheaUfRJlCBNg",
   authDomain: "hype-rec.firebaseapp.com",
   projectId: "hype-rec",
@@ -11,4 +10,6 @@ var firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-var db = firebase.firestore();
+const db = firebase.firestore();
+
+export { db }; 

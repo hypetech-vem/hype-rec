@@ -10,7 +10,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
      <!-- Configurações do seu projeto Firebase -->
-     <script src="firebase.js"></script>
+     
 </head>
 
 <body>
@@ -94,7 +94,7 @@
         </figure>
     </div>
 
-    <select id="hitDoAnoOpcoes">
+    <select id="hitDoAnoOpcoes" required>
         <option value="" disabled selected>Escolha a Tribo</option>
         <option value="TRIBO TRACK">TRIBO TRACK</option>
         <option value="TRIBO BIND">TRIBO BIND</option>
@@ -113,7 +113,7 @@
 <section class="section2">
     <!-- Conteúdo da Seção 2 -->
     <h2>Categoria GC que mais serve</h2>
-    <select id="gcServeOpcoes">
+    <select id="gcServeOpcoes" required>
         <option value="" disabled selected>Escolha o GC</option>
         <option value="INTOCAVEIS">INTOCAVEIS</option>
         <option value="COMBATENTES">COMBATENTES</option>
@@ -173,7 +173,7 @@
 <section class="section3">
     <!-- Conteúdo da Seção 3 -->
     <h2>Categoria GC mais instagramável</h2>
-    <select id="gcInstagramavelOpcoes">
+    <select id="gcInstagramavelOpcoes" required>
         <option value="" disabled selected>Escolha o GC</option>
         <option value="INTOCAVEIS">INTOCAVEIS</option>
         <option value="COMBATENTES">COMBATENTES</option>
@@ -233,7 +233,7 @@
 <section class="section4">
     <!-- Conteúdo da Seção 4 -->
     <h2>Categoria GC mais atrativo</h2>
-    <select id="gcAtrativoOpcoes">
+    <select id="gcAtrativoOpcoes" required>
         <option value="" disabled selected>Escolha o GC</option>
         <option value="INTOCAVEIS">INTOCAVEIS</option>
         <option value="COMBATENTES">COMBATENTES</option>
@@ -293,7 +293,7 @@
 <section class="section5">
     <!-- Conteúdo da Seção 5 -->
     <h2>Categoria Tribo da Galera</h2>
-    <select id="triboGaleraOpcoes">
+    <select id="triboGaleraOpcoes" required>
         <option value="" disabled selected>Escolha a Tribo</option>
         <option value="TRIBO TRACK">TRIBO TRACK</option>
         <option value="TRIBO BIND">TRIBO BIND</option>
@@ -309,10 +309,10 @@
 
 
     <!-- Seção 6 -->
-<section class="section6">
+<section class="section6" >
     <!-- Conteúdo da Seção 6 -->
     <h2>Categoria Tribo mais Estilosa</h2>
-    <select id="triboEstilosaOpcoes">
+    <select id="triboEstilosaOpcoes" required>
         <option value="" disabled selected>Escolha a Tribo</option>
         <option value="TRIBO TRACK">TRIBO TRACK</option>
         <option value="TRIBO BIND">TRIBO BIND</option>
@@ -331,7 +331,7 @@
 <section class="section7">
     <!-- Conteúdo da Seção 7 -->
     <h2>Categoria GC que mais convida</h2>
-    <select id="gcConvidaOpcoes">
+    <select id="gcConvidaOpcoes" required>
         <option value="" disabled selected>Escolha o GC</option>
         <option value="INTOCAVEIS">INTOCAVEIS</option>
         <option value="COMBATENTES">COMBATENTES</option>
@@ -389,10 +389,10 @@
 
     <!-- Seção 8 - Redirecionamento -->
     <section >
-        <button onclick="enviarVotos()" class="section8">Enviar votos</button>
+        <button id="btn-enviar" class="section8">Enviar votos</button>
     </section>
     <!-- Script para manipular o envio do formulário -->
-    <script src="crud.js"></script>
+    <script type="module" src="crud.js"></script>
 </body>
 
 </html>
